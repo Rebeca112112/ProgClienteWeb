@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Inverte frase </title>
+	<script>
+		function inversor()
+		{
+			var frase = document.getElementById("string").value;
+			document.getElementById("result").innerHTML= frase.split('').reverse().join('');
+
+		}
+
+	</script>
+	</head>
+<body>
+	<h3 id="result"></h3>
+	<input type="string" id="string"/>
+	<button onclick="javascript:inversor()"> Executar</button>
+</body>
+</html>

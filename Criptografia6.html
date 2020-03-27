@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Criptografia</title>
+	<script>
+		function criptografia() 
+		{
+			var palavra=document.getElementById("string").value;
+			var comprimento=palavra.length;
+			var v=[comprimento];
+			var i=0;
+			while(i<comprimento)
+			{
+				v[i]=palavra[i];
+				i++;
+			}
+			for(i=0;i<comprimento;i++) 
+			{
+				switch(v[i])
+				{
+					case "T": v[i]="P"; break;
+					case "t": v[i]="p"; break;
+					case "E": v[i]="O"; break; 
+					case "e": v[i]="o"; break;
+					case "N": v[i]="L"; break;
+					case "n": v[i]="l"; break;
+					case "I": v[i]="A"; break;
+					case "i": v[i]="a"; break; 
+					case "S": v[i]="R"; break;
+					case "s": v[i]="r";
+
+				}
+			
+			}
+			
+			document.getElementById("result").innerHTML=v;
+			return v;
+		}
+
+	</script>
+</head>
+<body>
+
+	<h1 id="result"></h1>
+	<input type="string" id="string">
+	<button onclick="javascript:criptografia()">Executar</button>
+
+</body>
+</html>

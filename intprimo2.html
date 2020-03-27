@@ -1,0 +1,63 @@
+<!DOCTYPEhtml>
+<html>
+	<head>
+		<title> NumeroPrimo</title>
+	<script>
+		function ehPrimo()
+		{	
+			var n = document.getElementById("numero").value;;
+			var aux=0;
+			var resposta;
+			if(n>=1)
+			{	
+				if(n==1)
+				{
+					resposta= "O número " + n + " é primo";
+					document.getElementById("result").innerHTML = resposta;
+					return resposta;
+				}
+				var i=0;
+				for(i=1; i<=n; i++) // tem q ser maior q zero e menor que o numero//
+				{
+					if(n%i==0)
+					aux++;
+				}
+				if(aux==2) // um numero primo so pode ser dividido por ele mesmo e por um, entao se a quantidade de vezes que o lup rodar for duas, ele eh primo//
+				{
+
+					 resposta = "O número "+ n +" é primo";
+                     document.getElementById("result").innerHTML = resposta; 
+                     return resposta;
+				}
+				if(aux>2)
+				{
+					resposta = "O número " + n + " não é primo";
+					document.getElementById("result").innerHTML= resposta;
+					return resposta;
+				}
+
+				
+			
+			}
+			else 
+				{
+                resposta = "O número não pode ser 0 ou negativo!";
+                document.getElementById("result").innerHTML = resposta;
+                return resposta;
+				}
+
+		}
+
+
+
+	</script>
+	</head>
+
+<body>
+	<h3 id="result"></h3>
+	<input type="number" id="numero"/>
+	<button onclick="javascript:ehPrimo()"> Executar</button>
+
+
+</body>
+</html>
